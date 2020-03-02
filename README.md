@@ -1,4 +1,4 @@
-pycortex
+NHP-pycortex
 ========
 [![Build Status](https://travis-ci.org/gallantlab/pycortex.svg?branch=master)](https://travis-ci.org/gallantlab/pycortex)
 
