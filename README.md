@@ -2,8 +2,10 @@ pycortex
 ========
 [![Build Status](https://travis-ci.org/gallantlab/pycortex.svg?branch=master)](https://travis-ci.org/gallantlab/pycortex)
 
+![NHP-pycortex](docs/NHP-pycortex.png)
+<!--
 [![quickflat demo](https://raw.github.com/jamesgao/pycortex/master/docs/wn_med.png)](https://gallantlab.github.io/pycortex)
-
+-->
 Pycortex is a software library that allows you to visualize fMRI or other volumetric neuroimaging data on cortical surfaces. In this fork, some code has been adapted by Chris Klink (c.klink@nin.knaw.nl) to make pycortex compatible with the NHP neuroimaging pipelines (especially [NHP-Freesurfer](https://github.com/VisionandCognition/NHP-Freesurfer)) of the Netherlands Institute for Neuroscience.
 
 Quickstart
