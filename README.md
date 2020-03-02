@@ -24,6 +24,27 @@ cd NHP-pycortex
 python setup.py develop
 ```
 
+Pycortex uses a configuration file to specify where things are save. Edit to make it point to where you want your files.
+You can check the location of the filestore after installing by running:
+
+```python
+import cortex
+cortex.database.default_filestore
+```
+
+And you can check the location of the config file by running:
+
+```python
+import cortex
+cortex.options.usercfg
+```
+If you want to move the filestore, you need to update the config file:
+
+```
+[basic]
+filestore=/abs/path/to/filestore
+```
+
 Documentation
 -------------
 Pycortex documentation is available at [https://gallantlab.github.io/pycortex](https://gallantlab.github.io/pycortex). You can find many examples of pycortex features in the [pycortex example gallery](https://gallantlab.github.io/pycortex/auto_examples/index.html). These examples are also present in this repository. In `examples` you can find python code you can execute in [IPython](http://www.ipython.org/). In `example-notebooks` you will find [Jupyter notebooks](https://jupyter.org/) with the same examples.
