@@ -52,3 +52,5 @@ nosetests.xml
 .vscode
 
 *.nfs*
+
+.ipynb_checkpoints/
