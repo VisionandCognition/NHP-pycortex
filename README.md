@@ -4,56 +4,31 @@ pycortex
 
 [![quickflat demo](https://raw.github.com/jamesgao/pycortex/master/docs/wn_med.png)](https://gallantlab.github.io/pycortex)
 
-Pycortex is a software library that allows you to visualize fMRI or other volumetric neuroimaging data on cortical surfaces.
+Pycortex is a software library that allows you to visualize fMRI or other volumetric neuroimaging data on cortical surfaces. In this fork, some code has been adapted by Chris Klink (c.klink@nin.knaw.nl) to make pycortex compatible with the NHP neuroimaging pipelines (especially [NHP-Freesurfer](https://github.com/VisionandCognition/NHP-Freesurfer)) of the Netherlands Institute for Neuroscience.
 
 Quickstart
 ----------
+Install [conda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html) to manage virtual python environments. The do the following:
+
 ```bash
-# create a virtual environment called env with Python 3
-python3 -m venv env  
+# create a conda environment with Python 3
+# here we call it 'neuro' and assume the default Python for conda is Python 3
+conda create --name neuro  
 # activate the virtual environment
-source env/bin/activate
+conda activate neuro    
 # install some prerequisite packages
-pip install -U setuptools wheel numpy cython
-# install the latest release of pycortex from pip
-pip install -U pycortex
-```
-
-This command creates a new [virtualenv](https://docs.python.org/3/library/venv.html) for pycortex to resolve dependencies. Run `source env/bin/activate` whenever you need pycortex.
-
-If you want to install the latest, unreleased version of pycortex from github, instead of the last line you can run
-
-```bash
-# install unreleased version of pycortex from github
-pip install -U git+git://github.com/gallantlab/pycortex.git
+pip install numpy Cython scipy h5py nibabel matplotlib Pillow numexpr tornado lxml networkx jupyter jupyterlab
+# install this adapted pycortex release
+git clone https://github.com/VisionandCognition/NHP-pycortex.git
+cd NHP-pycortex
+python setup.py develop
 ```
 
 Documentation
 -------------
-Pycortex documentation is available at [https://gallantlab.github.io/pycortex](https://gallantlab.github.io/pycortex). You can find many examples of pycortex features in the [pycortex example gallery](https://gallantlab.github.io/pycortex/auto_examples/index.html).
+Pycortex documentation is available at [https://gallantlab.github.io/pycortex](https://gallantlab.github.io/pycortex). You can find many examples of pycortex features in the [pycortex example gallery](https://gallantlab.github.io/pycortex/auto_examples/index.html). These examples are also present in this repository. In `examples` you can find python code you can execute in [IPython](http://www.ipython.org/). In `example-notebooks` you will find [Jupyter notebooks](https://jupyter.org/) with the same examples.
 
-To build the documentation locally:
-```bash
-pip install sphinx_gallery
-pip install numpydoc
-cd docs
-make html
-# open `docs/_build/html/index.html` in web browser
-```
 
-Demo
-----
-Pycortex is best used with [IPython](http://www.ipython.org/). Install it in your virtualenv using 
-```bash
-source env/bin/activate
-pip install ipython
-```
-To run the pycortex demo,
-```ipython
-$ ipython
-In [1]: import cortex
-In [2]: cortex.webshow(cortex.Volume.random("S1", "fullhead"))
-```
 
 Citation
 --------
@@ -64,4 +39,4 @@ _Gao JS, Huth AG, Lescroart MD and Gallant JL (2015) Pycortex: an interactive su
 Getting help
 -----------
 Please post on [NeuroStars](https://neurostars.org/) with the tag `pycortex` to 
-ask questions about how to use Pycortex.
+ask questions about how to use Pycortex. For NHP-pycortex specific questions, post an issue on this repository.
