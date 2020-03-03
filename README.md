@@ -51,7 +51,10 @@ Documentation
 -------------
 Pycortex documentation is available at [https://gallantlab.github.io/pycortex](https://gallantlab.github.io/pycortex). You can find many examples of pycortex features in the [pycortex example gallery](https://gallantlab.github.io/pycortex/auto_examples/index.html). These examples are also present in this repository. In `examples` you can find python code you can execute in [IPython](http://www.ipython.org/). In `example-notebooks` you will find [Jupyter notebooks](https://jupyter.org/) with the same examples.
 
-
+Customization
+-------------
+In order to make pycortex with our NHP data we make several small alteration to the code. 
+These changes are documented [here](customcode.md).
 
 Citation
 --------
